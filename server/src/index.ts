@@ -9,7 +9,7 @@ import userRoutes from "routes/userRoutes";
 
 const app = express();
 
-const port = 8080;
+const port = 3000;
 const allowedOrigins = [
   "http://localhost",
   "https://www.google.com",
