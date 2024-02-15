@@ -5,7 +5,8 @@ import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
 import mongoose from "mongoose";
-import userRoutes from "routes/userRoutes";
+import userRoutes from "./routes/userRoutes";
+import authRoutes from "./routes/authRoutes";
 
 const app = express();
 
@@ -40,6 +41,7 @@ app.use(bodyParser.json());
 const server = http.createServer(app);
 
 app.use("/api/users", userRoutes);
+app.use("/auth", authRoutes);
 
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}/`);
