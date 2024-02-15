@@ -2,12 +2,12 @@ import { Request, Response } from "express";
 import axios from "axios";
 import { UserModel } from "../db/users";
 
-const externalAPI = "https://reqres.in";
+const externalAPI = "https://reqres.in/api";
 
 export const getUsers = async (req: Request, res: Response) => {
   try {
     const page = req.params.page;
-    const response = await axios.get(`${externalAPI}/api/users?page=${page}`);
+    const response = await axios.get(`${externalAPI}/users?page=${page}`);
     const users = response.data.data;
     res.status(200).json(users);
   } catch (error) {
@@ -18,7 +18,7 @@ export const getUsers = async (req: Request, res: Response) => {
 export const getUser = async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
-    const response = await axios.get(`${externalAPI}/api/users/${id}`);
+    const response = await axios.get(`${externalAPI}/users/${id}`);
     const user = response.data.data;
     res.status(200).json(user);
   } catch (error) {
