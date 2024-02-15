@@ -1,6 +1,6 @@
 # Users App
 
-This project consists of a Node.js server running on port 8080 and a React frontend application.
+This project consists of a Node.js server running on port 4000 and a React frontend application.
 
 ## Server
 

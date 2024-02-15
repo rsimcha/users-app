@@ -11,7 +11,7 @@ require("dotenv").config();
 
 const app = express();
 
-const port = 8080;
+const port = 4000;
 const allowedOrigins = [
   "http://localhost",
   "https://www.google.com",
@@ -49,5 +49,7 @@ server.listen(port, () => {
 });
 
 mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(
+  "mongodb+srv://rina:Cr0dHfSaGYpAB7sy@cluster0.sztugj6.mongodb.net/?retryWrites=true&w=majority"
+);
 mongoose.connection.on("error", (error: Error) => console.log(error));
