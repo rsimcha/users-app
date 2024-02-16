@@ -11,7 +11,7 @@ The server handles API requests related to user management. It communicates with
 1. Clone this repository.
 2. Navigate to the `server` directory.
 3. Run `npm install` to install dependencies.
-4. Create a `.env` file and configure environment variables (e.g., `MONGO_URL`, `ACCESS_TOKEN_SECRET`).
+4. Create a `.env` file and configure environment variables (e.g., `MONGO_URL`, `JWT_SECRET`).
 5. Run `npm start` to start the server.
 
 ### Usage

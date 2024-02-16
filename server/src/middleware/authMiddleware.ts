@@ -14,10 +14,10 @@ export const verifyToken = (
     return res.status(401).json({ message: "No token provided" });
   }
 
-  jwt.verify(token, process.env.ACCESS_TOKEN, (err: Error) => {
+  jwt.verify(token, process.env.JWT_SECRET, (err: Error) => {
     if (err) {
       return res.status(401).json({ message: "Failed to authenticate token" });
     }
-    next()
+    next();
   });
 };
