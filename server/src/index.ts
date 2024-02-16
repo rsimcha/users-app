@@ -49,7 +49,5 @@ server.listen(port, () => {
 });
 
 mongoose.Promise = Promise;
-mongoose.connect(
-  "mongodb+srv://rina:Cr0dHfSaGYpAB7sy@cluster0.sztugj6.mongodb.net/?retryWrites=true&w=majority"
-);
+mongoose.connect(process.env.MONGO_URL);
 mongoose.connection.on("error", (error: Error) => console.log(error));
